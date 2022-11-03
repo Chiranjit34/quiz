@@ -18,7 +18,7 @@ export const Home = () => {
   const handleSubmit = () => {
     let payload = JSON.stringify(data);
     console.log(payload);
-    fetch(`https://stormy-refuge-21583.herokuapp.com/data/data`, {
+    fetch(`https://localhot:8080/data/data`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

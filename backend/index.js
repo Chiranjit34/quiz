@@ -1,8 +1,10 @@
 const express = require("express");
 const connection = require("./config/db");
-require("dotenv").config();
 const dataController = require("./routes/data.routes");
+const userRouter = require("./routes/userRouter");
 const cors = require("cors");
+
+require("dotenv").config();
 
 const app = express();
 
@@ -14,6 +16,7 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
+app.use("/users", userRouter);
 app.use("/data", dataController);
 
 app.listen(process.env.PORT, async () => {

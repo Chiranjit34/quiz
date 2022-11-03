@@ -8,7 +8,6 @@ export const SingleQuiz = ({ item, setI ,i,length,setScore,score,a,seta}) => {
   return (
     <Box
     m="auto"
-     
       w="80%"
       h="150px"
       mt="20px"
